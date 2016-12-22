@@ -5,6 +5,7 @@ Role is designed for [Let's encrypt](https://letsencrypt.org/) integration. It i
 
 There's a ```dontgen``` tag that dosn't generate certificates but just shows you the generation commands and puts cron tasks.
 
+Shamelessly forked from gitinsky/ansible-role-letsencrypt so I could publish it to ansible galaxy. 
 Requirements
 ------------
 
