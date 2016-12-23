@@ -96,7 +96,10 @@
   always:
 
   - name: put letsencrypt cron job
-    template: src=cron.d/letsencrypt.j2 dest=/etc/cron.d/letsencrypt
+    template: 
+      src: cron.d/letsencrypt.j2 
+      dest: /etc/cron.d/letsencrypt
+      mode: 0700
     tags: 
       - dontgen
       - cron
