@@ -5,7 +5,7 @@ Role is designed for [Let's encrypt](https://letsencrypt.org/) integration. It i
 
 There's a ```dontgen``` tag that dosn't generate certificates but just shows you the generation commands and puts cron tasks.
 
-Shamelessly forked from gitinsky/ansible-role-letsencrypt so I could publish it to ansible galaxy. 
+Shamelessly forked from gitinsky/ansible-role-letsencrypt so I could publish it to ansible galaxy.
 Requirements
 ------------
 
@@ -117,7 +117,8 @@ Role Variables
 |---------------|:-------------:|-------------|
 | letsencrypt_path| /opt/letsencrypt | letsencrypt clone path |
 | letsencrypt_webroot| /var/www/letsencrypt| letsencrypt webroot |
-| letsencrypt_reload_nginx| True | if ```true```, adds ```service nginx reload``` task to cron|
+| letsencrypt_reload_nginx| yes | if ```true/yes```, adds ```service nginx reload``` task to cron|
+| letsencrypt_reload_gitlab| no | if ```true/yes```, adds ```gitlab-ctl restart nginx``` task to cron|
 | letsencrypt | none | list of dictionaries, see example below |
 |letsencrypt_group|False|name of group of hosts with identical or intersectional list of certificates. Will be used to calculate time for cron tasks to avoid simultaneous renewal.
 

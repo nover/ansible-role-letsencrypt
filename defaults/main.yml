@@ -3,5 +3,6 @@
 letsencrypt_path: /opt/letsencrypt
 letsencrypt_webroot: /var/www/letsencrypt
 letsencrypt_reload_nginx: yes
+letsencrypt_reload_gitlab: no
 letsencrypt_group: False
 letsencrypt: []

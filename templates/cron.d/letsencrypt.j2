@@ -15,3 +15,8 @@
 # reload nginx
 15 4 14 * *  root service nginx reload 2>&1 | logger -t letsencrypt
 {% endif %}
+
+{% if letsencrypt_reload_gitlab %}
+# reload gitlab nginx
+15 4 14 * *  /usr/bin/gitlab-ctl restart nginx 2>&1 | logger -t letsencrypt
+{% endif %}
