@@ -9,7 +9,7 @@
 # - - - - -
 # * * * * * command to be executed
 # Renew all let's encrypt certificates on this machine
-0 4 14 * * {{letsencrypt_path}}/letsencrypt-auto renew  2>&1 | logger -t letsencrypt
+0 4 14 * * root {{letsencrypt_path}}/letsencrypt-auto renew  2>&1 | logger -t letsencrypt
 
 {% if letsencrypt_reload_nginx %}
 # reload nginx
@@ -18,5 +18,5 @@
 
 {% if letsencrypt_reload_gitlab %}
 # reload gitlab nginx
-15 4 14 * *  /usr/bin/gitlab-ctl restart nginx 2>&1 | logger -t letsencrypt
+15 4 14 * *  root /usr/bin/gitlab-ctl restart nginx 2>&1 | logger -t letsencrypt
 {% endif %}
